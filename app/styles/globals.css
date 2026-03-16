@@ -2,6 +2,7 @@
   margin: 0;
   outline: none;
   list-style: none;
+  user-select: none;
 }
 
 body {
