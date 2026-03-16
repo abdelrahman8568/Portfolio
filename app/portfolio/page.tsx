@@ -27,6 +27,10 @@ import chakraui from "@/public/images/skills/chakraui.svg";
 import gsap from "@/public/images/skills/gsap.svg";
 import vercel from "@/public/images/skills/vercel.svg";
 import figma from "@/public/images/skills/figma.svg";
+import bun from "@/public/images/skills/bun.svg";
+import tailwind from "@/public/images/skills/tailwind.svg";
+import postman from "@/public/images/skills/postman.svg";
+import nextAuth from "@/public/images/skills/next-auth.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -392,6 +396,10 @@ function Portfolio() {
           chakraui,
           gsap,
           vercel,
+          bun,
+          tailwind,
+          postman,
+          nextAuth,
         ].map((image, index) => (
           <motion.img
             initial={{ opacity: 0, scaleY: 0 }}
