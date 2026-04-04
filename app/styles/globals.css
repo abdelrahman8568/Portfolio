@@ -31,7 +31,7 @@ body {
   border-right: var(--gc) 1px solid;
   display: flex;
   flex-direction: column;
-  border-top: 30vh transparent solid;
+  border-top: 6rem transparent solid;
   padding-bottom: 10%;
   z-index: 9;
 }
@@ -48,4 +48,10 @@ p {
   font-size: 2em;
   color: var(--gc);
   padding-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding-bottom: 20%;
+  }
 }
