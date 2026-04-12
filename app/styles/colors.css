@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@theme {
+  /* Primary Colors */
+  --color-primary: #987750;
+  --color-secondary: #75dab4;
+  --color-white: #ddd;
+  --color-gray: #888;
+  --color-black: #1d1b19;
+  --color-dark: #181715;
+  /* Status Colors */
+  --color-gray-light: #cfd1d5;
+  --color-warning: #fff5e6;
+  --color-warning-light: #ffe6e6;
+  --color-danger: #ad0505;
+  --color-danger-light: #ffe6e6;
+  --color-danger-200: #d20002;
+  --color-success: #208800;
+
+  --color-link: #3d7bff;
+
+  --color-success-light: #e6ffec;
+  --color-yellow: #ffaf53;
+  --color-light: #f7f5ff;
+  /* Toast Colors */
+  --color-toast-success-border: var(--color-primary);
+  --color-toast-success-text: var(--color-primary);
+  --color-toast-error-border: var(--color-danger);
+  --color-toast-error-text: var(--color-danger);
+  /* Carousel Colors */
+  --color-pagination-bullet-active-color: var(--color-primary);
+  --color-pagination-bullet-color: var(--color-gray-500);
+  --color-navigation-color: transparent;
+  --color-navigation-border: transparent;
+  --color-navigation-background: transparent;
+}

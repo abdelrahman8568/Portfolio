@@ -42,7 +42,7 @@ const Navbar = () => {
           delay: -0.75,
         });
     },
-    { scope: container }
+    { scope: container },
   );
 
   useEffect(() => {

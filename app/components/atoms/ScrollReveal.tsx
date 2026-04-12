@@ -65,11 +65,11 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
           end: rotationEnd,
           scrub: true,
         },
-      }
+      },
     );
 
     const wordElements = el.querySelectorAll(
-      ".word"
+      ".word",
     ) as NodeListOf<HTMLElement>;
 
     gsap.fromTo(
@@ -86,7 +86,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
           end: wordAnimationEnd,
           scrub: true,
         },
-      }
+      },
     );
 
     if (enableBlur) {
@@ -104,7 +104,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
             end: wordAnimationEnd,
             scrub: true,
           },
-        }
+        },
       );
     }
 
