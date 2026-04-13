@@ -71,7 +71,7 @@ const SplitText: React.FC<SplitTextProps> = ({
           : marginValue < 0
             ? `-=${Math.abs(marginValue)}${marginUnit}`
             : `+=${marginValue}${marginUnit}`;
-      const start = `top ${startPct}%${sign}`;
+      const start = `top ${startPct}%`;
       let targets: Element[] = [];
       const assignTargets = (self: GSAPSplitText) => {
         if (splitType.includes("chars") && self.chars.length)
@@ -102,10 +102,8 @@ const SplitText: React.FC<SplitTextProps> = ({
               stagger: delay / 1000,
               scrollTrigger: {
                 trigger: el,
-                start,
+                start: "top 85%",
                 once: true,
-                fastScrollEnd: true,
-                anticipatePin: 0.4,
               },
               onComplete: () => {
                 animationCompletedRef.current = true;
@@ -148,7 +146,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     const classes = className;
 
     return (
-      <h3 ref={ref} className={classes}>
+      <h3 ref={ref} className={`font-bold ${classes}`}>
         {text}
       </h3>
     );

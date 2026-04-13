@@ -1,10 +1,10 @@
-// Portfolio.tsx
 "use client";
 import SplitText from "@/app/components/atoms/SplitText";
 import { MainBox } from "@/app/components/atoms/MotionBox";
 import LogoLoop from "@/app/components/atoms/LogoLoop";
 import { PortfolioCard } from "@/app/components/molecules/PortfolioCard";
 import Image from "next/image";
+import { SubTitle } from "@/app/components/atoms/SubTitle";
 
 export interface Project {
   id: number;
@@ -29,13 +29,15 @@ export const Portfolio = ({ projects, skills }: PortfolioProps) => {
   return (
     <div className="mainContainer">
       <SplitText text="Portfolio" />
-      <MainBox name="flex flex-col max-w-full flex-wrap flex-auto pt-[5%] pb-[10%]">
-        <p className="text-start ps-[10%] mb-8">Some Recent Work</p>
-        <div className="w-full flex flex-wrap justify-center gap-[6vh] md:gap-[15vh] md:ps-[10%]">
-          {projects.map((project, index) => (
-            <PortfolioCard key={project.id} project={sortedProjects[index]} />
-          ))}
-        </div>
+      <MainBox>
+        <SubTitle
+          text={{
+            content: "Some Recent Work",
+          }}
+        />
+        {projects.map((project, index) => (
+          <PortfolioCard key={project.id} project={sortedProjects[index]} />
+        ))}
       </MainBox>
       <SplitText text="skills" />
       <LogoLoop
@@ -50,9 +52,9 @@ export const Portfolio = ({ projects, skills }: PortfolioProps) => {
           <Image
             src={(item as any).src}
             alt="skill icon"
-            width={85}
-            height={85}
-            className="w-25 h-25 object-contain opacity-70 transition-all duration-500 hover:opacity-100 hover:scale-110"
+            width={100}
+            height={100}
+            className="w-10 md:w-25 h-10 md:h-25 object-contain max-w-10 md:max-w-25 opacity-70 transition-all duration-500 hover:opacity-100 hover:scale-110"
           />
         )}
       />

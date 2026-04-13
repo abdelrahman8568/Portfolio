@@ -1,11 +1,4 @@
 "use client";
-import "../../styles/services.css";
-import logo_1 from "@/public/images/services/service_1.jpg";
-import logo_2 from "@/public/images/services/service_2.jpg";
-import logo_3 from "@/public/images/services/service_3.jpg";
-import logo_4 from "@/public/images/services/service_4.jpg";
-import logo_5 from "@/public/images/services/service_5.jpg";
-import logo_6 from "@/public/images/services/service_6.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import SplitText from "@/app/components/atoms/SplitText";
@@ -14,125 +7,118 @@ import {
   CertificatesBox,
   MainBox,
 } from "@/app/components/atoms/MotionBox";
+import { SubTitle } from "@/app/components/atoms/SubTitle";
+import logo_1 from "@/public/images/services/service_1.jpg";
+import logo_2 from "@/public/images/services/service_2.jpg";
+import logo_3 from "@/public/images/services/service_3.jpg";
+import logo_4 from "@/public/images/services/service_4.jpg";
+import logo_5 from "@/public/images/services/service_5.jpg";
+import logo_6 from "@/public/images/services/service_6.jpg";
+
+const servicesData = [
+  { id: 1, img: logo_1, title: "Problem Solving" },
+  { id: 2, img: "", title: "" },
+  { id: 3, img: logo_2, title: "Landing Page" },
+  { id: 4, img: "", title: "" },
+  { id: 6, img: "", title: "" },
+  { id: 5, img: logo_3, title: "Building E-commerce" },
+  { id: 8, img: "", title: "" },
+  { id: 7, img: logo_4, title: "Next.js Development" },
+  { id: 9, img: logo_5, title: "Adobe Photoshop" },
+  { id: 10, img: "", title: "" },
+  { id: 11, img: logo_6, title: "Responsive Design" },
+  { id: 12, img: "", title: "" },
+];
+
+const certificatesData = [
+  {
+    id: 1,
+    href: "https://www.coursera.org/account/accomplishments/verify/9RZZ6ZKXSRHH",
+    org: "meta",
+    title: "Advanced React",
+  },
+  {
+    id: 2,
+    href: "https://www.coursera.org/account/accomplishments/verify/TLDL9GAFTDFR",
+    org: "meta",
+    title: "React Basics",
+  },
+  {
+    id: 3,
+    href: "https://www.coursera.org/account/accomplishments/verify/J2YBGNRBVZ83",
+    org: "meta",
+    title: "Programming with JavaScript",
+  },
+  {
+    id: 4,
+    href: "https://www.coursera.org/account/accomplishments/verify/WBJ9SHQERMGB",
+    org: "meta",
+    title: "Version Control",
+  },
+  {
+    id: 5,
+    href: "https://www.coursera.org/account/accomplishments/verify/A5WBE4VDRG5D",
+    org: "meta",
+    title: "HTML and CSS in depth",
+  },
+  {
+    id: 6,
+    href: "https://www.coursera.org/account/accomplishments/verify/HAJGRQ7PNXUK",
+    org: "meta",
+    title: "Introduction to Front-End Development",
+  },
+  {
+    id: 7,
+    href: "https://learn.udacity.com/view-certificate/nd000-fwd-t1",
+    org: "udacity",
+    title: "Web Development Challenger",
+  },
+];
 
 export const Services = () => {
   return (
     <div className="mainContainer">
       <SplitText text="my services" />
-      <MainBox name="servicesContainer">
-        <p>The Best Services I Can Help You With</p>
-        <div className="logoContainer">
-          <AnimationsBox name="left">
-            <Image src={logo_1} alt="Logo Image" className="servicesLogo" />
-            <h6>Problem Solving</h6>
-          </AnimationsBox>
-          <AnimationsBox name="left">
-            <Image src={logo_2} alt="Logo Image" className="servicesLogo" />
-            <h6>Landing Page</h6>
-          </AnimationsBox>
-          <AnimationsBox name="right">
-            <Image src={logo_3} alt="Logo Image" className="servicesLogo" />
-            <h6>Building E-commerce </h6>
-          </AnimationsBox>
-          <AnimationsBox name="right">
-            <Image src={logo_4} alt="Logo Image" className="servicesLogo" />
-            <h6>Next.js Development</h6>
-          </AnimationsBox>
-          <AnimationsBox name="left">
-            <Image src={logo_5} alt="Logo Image" className="servicesLogo" />
-            <h6>Adobe Photoshop</h6>
-          </AnimationsBox>
-          <AnimationsBox name="left">
-            <Image src={logo_6} alt="Logo Image" className="servicesLogo" />
-            <h6>Responsive Design</h6>
-          </AnimationsBox>
+      <MainBox>
+        <SubTitle text={{ content: "The Best Services I Can Help You With" }} />
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-1.25 max-w-[90%] w-full">
+          {servicesData.map((service) =>
+            service.img === "" ? (
+              <span className=" w-full h-full" key={service.id} />
+            ) : (
+              <AnimationsBox key={service.id}>
+                <div className="w-full h-full flex text-center items-center justify-center relative">
+                  <Image
+                    src={service.img}
+                    alt="Logo Image"
+                    className="opacity-30 transition-all ease duration-700 z-999 rounded-[50%]  hover:rounded-none hover:shadow-[0_0_20px_2px_gray]"
+                  />
+                  <h6 className="text-white md:text-[1.8rem] font-semibold md:w-45 absolute cursor-default flex justify-center">
+                    {service.title}
+                  </h6>
+                </div>
+              </AnimationsBox>
+            ),
+          )}
         </div>
       </MainBox>
       <SplitText text="certificates" />
-      <div>
-        <CertificatesBox>
+      {certificatesData.map((cert) => (
+        <CertificatesBox key={cert.id}>
           <Link
-            href={
-              "https://www.coursera.org/account/accomplishments/verify/9RZZ6ZKXSRHH"
-            }
+            href={cert.href}
             target="_blank"
-            className="servicesLink"
+            className="group bg-dark w-full h-full no-underline text-start p-[5%] md:text-[22px] border border-primary overflow-hidden block"
           >
-            <h3>meta</h3>
-            <h2>Advanced React</h2>
+            <h3 className="py-2.5 text-gray font-bold uppercase duration-700 border-l-2 border-primary pl-[5vw] relative right-[5vw] transition-all ease-in-out group-hover:right-0 group-hover:pl-[3vw]">
+              {cert.org}
+            </h3>
+            <h2 className="border-l-2 border-gray font-bold pl-[3vw] text-white">
+              {cert.title}
+            </h2>
           </Link>
         </CertificatesBox>
-        <CertificatesBox>
-          <Link
-            href={
-              "https://www.coursera.org/account/accomplishments/verify/TLDL9GAFTDFR"
-            }
-            target="_blank"
-            className="servicesLink"
-          >
-            <h3>meta</h3>
-            <h2>React Basics</h2>
-          </Link>
-        </CertificatesBox>
-        <CertificatesBox>
-          <Link
-            href={
-              "https://www.coursera.org/account/accomplishments/verify/J2YBGNRBVZ83"
-            }
-            target="_blank"
-            className="servicesLink"
-          >
-            <h3>meta</h3>
-            <h2>Programming with JavaScript</h2>
-          </Link>
-        </CertificatesBox>
-        <CertificatesBox>
-          <Link
-            href={
-              "https://www.coursera.org/account/accomplishments/verify/WBJ9SHQERMGB"
-            }
-            target="_blank"
-            className="servicesLink"
-          >
-            <h3>meta</h3>
-            <h2>Version Control</h2>
-          </Link>
-        </CertificatesBox>
-        <CertificatesBox>
-          <Link
-            href={
-              "https://www.coursera.org/account/accomplishments/verify/A5WBE4VDRG5D"
-            }
-            target="_blank"
-            className="servicesLink"
-          >
-            <h3>meta</h3>
-            <h2>HTML and CSS in depth</h2>
-          </Link>
-        </CertificatesBox>
-        <CertificatesBox>
-          <Link
-            href={
-              "https://www.coursera.org/account/accomplishments/verify/HAJGRQ7PNXUK"
-            }
-            target="_blank"
-            className="servicesLink"
-          >
-            <h3>meta</h3>
-            <h2>Introduction to Front-End Development</h2>
-          </Link>
-        </CertificatesBox>
-        <CertificatesBox>
-          <Link
-            href={"https://learn.udacity.com/view-certificate/nd000-fwd-t1"}
-            target="_blank"
-            className="servicesLink"
-          >
-            <h3>udacity</h3>
-            <h2>Web Development Challenger</h2>
-          </Link>
-        </CertificatesBox>
-      </div>
+      ))}
     </div>
   );
 };
