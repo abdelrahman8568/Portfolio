@@ -45,13 +45,6 @@ body {
   text-transform: uppercase;
 }
 
-/* p {
-  width: 90%;
-  font-size: 2em;
-  color: var(--gc);
-  padding-bottom: 5%;
-} */
-
 @media (max-width: 768px) {
   .mainContainer {
     padding-bottom: 20%;

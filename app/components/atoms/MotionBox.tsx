@@ -12,7 +12,7 @@ export function MainBox({ children, className }: MotionBoxProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
       viewport={{ once: true }}
-      className={`w-full max-w-full flex flex-col flex-wrap flex-auto pt-[5%] ps-[10%] ${className}`}
+      className={`w-full max-w-full flex flex-col flex-wrap flex-auto pt-[5%] ps-[10%] gap-[20vh] ${className}`}
     >
       {children}
     </motion.div>

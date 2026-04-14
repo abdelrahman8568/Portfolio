@@ -30,9 +30,12 @@ function Introduction() {
   return (
     <div className=" w-full bg-black flex flex-col">
       <motion.div
-        className="absolute left-[7.5%] w-[85%] h-[30vh] bg-black shadow-[0_10px_50px_#eeeeee1f] flex flex-col items-center justify-center text-center z-999 max-md:py-5"
-        initial={{ top: "120vh" }}
-        animate={{ top: "85vh" }}
+        className="absolute left-[7.5%] w-[85%] md:h-[30vh] bg-black shadow-[0_10px_50px_#eeeeee1f] 
+             flex flex-col items-center justify-center text-center z-999 max-md:py-5
+             [--top-init:110vh] [--top-anim:91vh] 
+             md:[--top-init:120vh] md:[--top-anim:85vh]"
+        initial={{ top: "var(--top-init)" }}
+        animate={{ top: "var(--top-anim)" }}
         transition={{ duration: 1, delay: 1 }}
       >
         <h1 className="text-primary text-5xl font-bold w-[60%] md:mb-4 max-md:text-xl max-md:w-[80%]">
