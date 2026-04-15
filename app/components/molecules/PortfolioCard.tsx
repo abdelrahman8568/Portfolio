@@ -9,8 +9,8 @@ interface IPortfolioCard {
 
 export const PortfolioCard: React.FC<IPortfolioCard> = ({ project }) => {
   return (
-    <div className="top-[10%] w-[95%] h-full flex items-center max-md:flex-col overflow-hidden sticky bg-bc transition-all duration-1000 bg-black">
-      <div className="group h-full w-[85%] flex flex-col items-center justify-center text-center overflow-hidden relative">
+    <div className="top-[35%] md:top-[10%] w-[95%] h-full max-md:pb-20 flex items-center max-md:flex-col overflow-hidden sticky bg-bc transition-all duration-1000 bg-black">
+      <div className="group h-full w-full md:w-[85%] flex flex-col items-center justify-center text-center overflow-hidden relative">
         <Image
           src={project.image}
           alt={project.title}

@@ -23,11 +23,19 @@ function Home() {
         priority
         className="fixed -top-12.5 left-0 w-screen max-md:w-[250vw] h-[135vh] -z-10 object-cover"
       />
+      <Image
+        src="/images/home/mob-cover.png"
+        alt="Cover Image"
+        priority
+        width={375}
+        height={900}
+        className="fixed bottom-0 right-0 w-fit h-fit md:w-140 -z-10 object-contain "
+      />
       <div
-        className="flex flex-col gap-7.5 px-[10%] py-[20%] text-[2.5em] text-whitetransition-all duration-200 -z-10 
+        className="flex flex-col gap-7.5 px-[10%] py-[20%]! text-[2.5em] text-white transition-all duration-200 -z-10 
                    md:text-[2.5em] 
                    max-md:text-[2em] 
-                   max-[585px]:text-[1.5em] max-[585px]:items-center max-[585px]:py-[50%] max-[585px]:px-0
+                   max-[585px]:text-[1.5em] max-[585px]:items-center  max-[585px]:px-0
                    max-[320px]:text-[1.3em]"
         style={{ transform: `translateY(${scrollY * 0.2}px)` }}
       >

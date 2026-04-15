@@ -28,17 +28,6 @@ export const Portfolio = ({ projects, skills }: PortfolioProps) => {
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
   return (
     <div className="mainContainer">
-      <SplitText text="Portfolio" />
-      <MainBox>
-        <SubTitle
-          text={{
-            content: "Some Recent Work",
-          }}
-        />
-        {projects.map((project, index) => (
-          <PortfolioCard key={project.id} project={sortedProjects[index]} />
-        ))}
-      </MainBox>
       <SplitText text="skills" />
       <LogoLoop
         logos={skills.map((item) => ({ src: item.image }))}
@@ -58,6 +47,17 @@ export const Portfolio = ({ projects, skills }: PortfolioProps) => {
           />
         )}
       />
+      <SplitText text="Portfolio" />
+      <MainBox className="pt-0! gap-5!">
+        <SubTitle
+          text={{
+            content: "Some Recent Work",
+          }}
+        />
+        {projects.map((project, index) => (
+          <PortfolioCard key={project.id} project={sortedProjects[index]} />
+        ))}
+      </MainBox>
     </div>
   );
 };
