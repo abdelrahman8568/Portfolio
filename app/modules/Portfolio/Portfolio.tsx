@@ -48,7 +48,7 @@ export const Portfolio = ({ projects, skills }: PortfolioProps) => {
         )}
       />
       <SplitText text="Portfolio" />
-      <MainBox className="pt-0! gap-5!">
+      <MainBox className="pt-0!">
         <SubTitle
           text={{
             content: "Some Recent Work",

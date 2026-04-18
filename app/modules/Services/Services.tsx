@@ -14,6 +14,7 @@ import logo_3 from "@/public/images/services/service_3.jpg";
 import logo_4 from "@/public/images/services/service_4.jpg";
 import logo_5 from "@/public/images/services/service_5.jpg";
 import logo_6 from "@/public/images/services/service_6.jpg";
+import ShinyText from "@/app/components/atoms/ShinyText";
 
 const servicesData = [
   { id: 1, img: logo_1, title: "Problem Solving" },
@@ -93,9 +94,12 @@ export const Services = () => {
                     alt="Logo Image"
                     className="opacity-30 transition-all ease duration-700 z-999 rounded-[50%]  hover:rounded-none hover:shadow-[0_0_20px_2px_gray]"
                   />
-                  <h6 className="text-white md:text-[1.8rem] font-semibold md:w-45 absolute cursor-default flex justify-center">
-                    {service.title}
-                  </h6>
+                  <ShinyText
+                    text={service.title}
+                    disabled={false}
+                    speed={3}
+                    className="text-2xl md:text-[1.8rem] font-semibold md:w-45 absolute cursor-default flex justify-center"
+                  />
                 </div>
               </AnimationsBox>
             ),
