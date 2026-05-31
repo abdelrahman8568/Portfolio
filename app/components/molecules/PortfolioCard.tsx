@@ -9,14 +9,14 @@ interface IPortfolioCard {
 
 export const PortfolioCard: React.FC<IPortfolioCard> = ({ project }) => {
   return (
-    <div className="top-[35%] md:top-[10%] w-[95%] h-full max-md:pb-20 flex items-center max-md:flex-col overflow-hidden sticky bg-bc transition-all duration-1000 bg-black">
-      <div className="group h-full w-full md:w-[85%] flex flex-col items-center justify-center text-center overflow-hidden relative">
+    <div className="top-[35%] md:top-[10%] w-[95%] h-full max-md:pb-20 flex items-center max-md:flex-col overflow-hidden sticky bg-bc transition-all duration-1000 bg-black md:mb-20!">
+      <div className="group h-full lg:h-[80dvh] w-full md:w-[85%] flex flex-col items-center justify-center text-center overflow-hidden relative">
         <Image
           src={project.image}
           alt={project.title}
           width={400}
           height={300}
-          className="w-full h-full object-cover transition-all duration-1500 group-hover:scale-120 group-hover:-rotate-5 group-hover:opacity-60 group-hover:blur-[3px]"
+          className="w-full h-full md:min-h-75 object-cover transition-all duration-1500 group-hover:scale-120 group-hover:-rotate-5 group-hover:opacity-60 group-hover:blur-[3px]"
         />
         <Link
           href={project.live}
