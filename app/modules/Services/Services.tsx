@@ -17,17 +17,17 @@ import logo_6 from "@/public/images/services/service_6.jpg";
 import ShinyText from "@/app/components/atoms/ShinyText";
 
 const servicesData = [
-  { id: 1, img: logo_1, title: "Problem Solving" },
+  { id: 1, img: logo_1, title: "Enterprise Web Applications" },
   { id: 2, img: "", title: "" },
-  { id: 3, img: logo_2, title: "Landing Page" },
+  { id: 3, img: logo_2, title: "Advanced Next.js Development" },
   { id: 4, img: "", title: "" },
   { id: 6, img: "", title: "" },
-  { id: 5, img: logo_3, title: "Building E-commerce" },
+  { id: 5, img: logo_3, title: "Performance & SEO Optimization" },
   { id: 8, img: "", title: "" },
-  { id: 7, img: logo_4, title: "Next.js Development" },
-  { id: 9, img: logo_5, title: "Adobe Photoshop" },
+  { id: 7, img: logo_4, title: "Interactive Landing Pages" },
+  { id: 9, img: logo_5, title: "Frontend-BaaS Integration" },
   { id: 10, img: "", title: "" },
-  { id: 11, img: logo_6, title: "Responsive Design" },
+  { id: 11, img: logo_6, title: "UI to Next.js Code" },
   { id: 12, img: "", title: "" },
 ];
 
