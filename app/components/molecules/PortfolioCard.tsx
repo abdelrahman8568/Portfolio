@@ -16,7 +16,7 @@ export const PortfolioCard: React.FC<IPortfolioCard> = ({ project }) => {
           alt={project.title}
           width={400}
           height={300}
-          className="w-full h-full md:min-h-75 object-cover transition-all duration-1500 group-hover:scale-120 group-hover:-rotate-5 group-hover:opacity-60 group-hover:blur-[3px]"
+          className="w-full h-full md:min-h-75 transition-all duration-1500 group-hover:scale-120  group-hover:opacity-60 group-hover:blur-[3px]"
         />
         <Link
           href={project.live}
