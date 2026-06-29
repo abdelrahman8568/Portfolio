@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "https://abdellrahman.vercel.app/:splat"
+  status = 301
+  force = true
