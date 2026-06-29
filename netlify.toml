@@ -1,11 +1,12 @@
+[[redirects]]
+from = "/*"
+to = "https://abdellrahman.vercel.app/:splat"
+status = 301
+force = true
+
 [build]
-  command = "npm run build"
-  publish = ".next"
+command = "npm run build"
+publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "22"
-
-[[redirects]]
-  from = "/*"
-  to = "https://abdellrahman.vercel.app/:splat"
-  status = 301
+NODE_VERSION = "22"
