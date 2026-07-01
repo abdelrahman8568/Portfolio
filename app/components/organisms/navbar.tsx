@@ -75,7 +75,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center text-center flex-1">
-          <div className="h-[90%] flex flex-col justify-center items-center">
+          <div className="h-[90vh] flex flex-col justify-center items-center">
             {NavLinks.map((link) => {
               const isActive = pathname === link.path;
               return (

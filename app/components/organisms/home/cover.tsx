@@ -29,7 +29,7 @@ function Home() {
         priority
         width={375}
         height={900}
-        className="fixed bottom-0 right-0 w-fit h-fit md:w-140 -z-10 object-contain "
+        className="fixed bottom-0 right-0 w-fit h-fit md:w-120 -z-10 object-contain"
       />
       <div
         className="flex flex-col gap-7.5 px-[10%] py-[20%]! text-[2.5em] text-white transition-all duration-200 -z-10 
